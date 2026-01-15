@@ -1,0 +1,7 @@
+ i could refactor the the  messge sending logic such that it doesn't wait for teh database response before     emit  the message 
+     #  the propesed solution is just emitting the the messge as soon as it gets with some place holder i and  status label teh when the storage completes send the real id and chaget teh status
+
+       front end 
+
+for the To.jsx  component i am pasisng the user prop in the chatwindow by searchin for it in contacts first but i can improve this by creating context that 
+ keeps tractk of the opened caht 

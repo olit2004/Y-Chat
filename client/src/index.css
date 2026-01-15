@@ -1,0 +1,87 @@
+/* index.css */
+
+/* 1. External Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+
+    --font-sarina: 'Sarina', cursive;
+    --font-poetsen: "Poetsen One", cursive;
+
+    --color-surface: var(--surface);
+    --color-text-primary: var(--text);
+    --color-text-secondary: var(--text-secondary);
+    --color-horizontal: var(--horizontal);
+
+    --color-sidebar-start: var(--sidebar-start);
+    --color-sidebar-end: var(--sidebar-end);
+    --color-contact-list: var(--contact-list);
+    --color-message-input: var(--message-input);
+
+    --color-border-subtle: var(--border-subtle);
+    --color-item-hover: var(--item-hover);
+    --color-item-active: var(--item-active);
+
+    --color-bubble-sent: var(--bubble-sent);
+    --color-bubble-received: var(--bubble-received);
+}
+
+
+@layer theme {
+
+
+    :root {
+        --surface: #f8fafc;
+        --text: #0f172a;
+        --text-secondary: #64748b;
+        --horizontal: #ffffff;
+        --sidebar-start: #2563eb;
+        --sidebar-end: #3b82f6;
+
+        --canva: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+        --contact-list: #ffffff;
+        --message-input: #f1f5f9;
+
+        --border-subtle: #e2e8f0;
+        --item-hover: #f1f5f9;
+        --item-active: #dbeafe;
+
+        --bubble-sent: #3b82f6;
+        --bubble-received: #ffffff;
+    }
+
+    /* --- DARK MODE --- */
+    .dark {
+        --surface: #0f172a;
+        --text: #f8fafc;
+        --text-secondary: #94a3b8;
+        --horizontal: #1e293b;
+
+        --sidebar-start: #020617;
+        --sidebar-end: #0f172a;
+
+        --canva: linear-gradient(180deg, #020617 0%, #0f172a 100%);
+        --contact-list: #1e293b;
+        --message-input: #1e293b;
+
+        --border-subtle: #334155;
+        --item-hover: #334155;
+        --item-active: #2563eb;
+
+        --bubble-sent: #2563eb;
+        --bubble-received: #334155;
+    }
+}
+
+@layer utilities {
+    .bg-canva {
+        background-image: var(--canva);
+    }
+}
