@@ -43,7 +43,8 @@ function AuthForm({ title }) {
   const handleAuth = async (data) => {
 
     try {
-      const res = await axios.post(`http://localhost:3000/${title}`, data, { withCredentials: true })
+      const apiBase = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+      const res = await axios.post(`${apiBase}/${title}`, data, { withCredentials: true })
       console.log("the server responded with the following", res.data)
       navigate('/')
 
